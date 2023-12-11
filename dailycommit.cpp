@@ -40,19 +40,19 @@ int main()
 
     system(update_readme);
     system(initialize_git);
-    std::cout << "happening here? 1";
+    std::cout << "happening here? 1" << std::endl;
     system(add_text);
-    std::cout << "happening here? 2";
+    std::cout << "happening here? 2" << std::endl;
     system(stage_git);
-    std::cout << "happening here? 3";
+    std::cout << "happening here? 3" << std::endl;
     system(git_commit);
     /* Make sure it's your username */
     char *add_git_with_username = str_replace(add_git_remote, "<USERNAME>", username);
     char *add_git_with_repo = str_replace(add_git_with_username, "<REPO_NAME>", repo_name);
-    std::cout << "happening here? 4";
+    std::cout << "happening here? 4" << std::endl;
     system(add_git_with_username);
     // char *push_with_passphrase = str_replace(git_push, "<PASSPHRASE>", passphrase);
-    std::cout << "happening here? 5";
+    std::cout << "happening here? 5" << std::endl;
     system(git_push);
 
     std::cout << "pushed to github please check your account in github" << std::endl;
