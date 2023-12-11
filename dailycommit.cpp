@@ -12,7 +12,7 @@ int main()
     char *personal_access_token = getenv("PAT");
     char *repo_name = getenv("REPO");
     char *username = getenv("USERNAME");
-    char *passphrase = getenv("PASSPHRASE");
+    // char *passphrase = getenv("PASSPHRASE");
     char *create_remote_repo_command = "curl -L \
         -X POST \
         -H \"Accept: application/vnd.github+json\" \
@@ -26,7 +26,7 @@ int main()
     char *stage_git = "git add .";
     char *git_commit = "git commit -m \"mamamia commit\"";
     char *add_git_remote = "git remote add origin git@github.com:<USERNAME>/<REPO_NAME>.git";
-    char *git_push = "git push -u origin main <<< <PASSPHRASE>";
+    char *git_push = "git push -u origin main";
 
     std::cout
         << "creating remote repository in github..." << std::endl;
@@ -47,8 +47,8 @@ int main()
     char *add_git_with_username = str_replace(add_git_remote, "<USERNAME>", username);
     char *add_git_with_repo = str_replace(add_git_with_username, "<REPO_NAME>", repo_name);
     system(add_git_with_username);
-    char *push_with_passphrase = str_replace(git_push, "<PASSPHRASE>", passphrase);
-    system(push_with_passphrase);
+    // char *push_with_passphrase = str_replace(git_push, "<PASSPHRASE>", passphrase);
+    system(git_push);
 
     std::cout << "pushed to github please check your account in github" << std::endl;
 
