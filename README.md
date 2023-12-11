@@ -13,6 +13,10 @@ When you execute dailycommit.cpp, you will have to input passphrase for the rsa 
 So automation perspective, better not have that passphrase but i think it wouldn't be impossible to automatically insert that passphrase. 
 
 Listen for the event of script being executed, then execute insert script? Let's try! haha fun coding. 
+
+### for those wondering, how to automate git passphrase - just use command `ssh-add` from terminal and add your passphrase there.
+
+mamamia!
 mamamia!
 mamamia!
 mamamia!
