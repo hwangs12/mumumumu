@@ -46,7 +46,7 @@ int main()
     char *add_git_with_username = str_replace(add_git_remote, "<USERNAME>", username);
     char *add_git_with_repo = str_replace(add_git_with_username, "<REPO_NAME>", repo_name);
     system(add_git_with_username);
-    // system(git_push);
+    system(git_push);
 
     std::cout << "pushed to github please check your account in github" << std::endl;
 
